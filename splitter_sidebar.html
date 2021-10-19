@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMJ SCAN 'n GO/Main</title>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css"/>
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="lib/onsen/js/onsenui.js"></script>
+    <script src='function.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="200px" collapse swipeable>
+          <div class="split_sidebar"><ons-page>
+            <ons-list>
+            <div style="font-size: large ;font-family: Arial, Helvetica, sans-serif;
+            width: 200px; height: 660px; background-color: #faeee1;">
+            <div style="background-position: center ; height:140px; "> <img src="img/PMJ.png" class="image_position"></div>
+                <ons-ripple color="#bb8fce" background="#85c1e9"></ons-ripple>
+                <p style="scroll-margin-left: auto;">
+              <ons-list-item onclick="fn.load('Home.html')" tappable>
+                <i class="fas fa-home"></i> Home
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('profile_user.html')" tappable>
+                <i class="fas fa-user"></i> User Profile
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('manage_vehicle.html')" tappable>
+                <i class="fas fa-car-side"></i> Manage Vehicle
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('History.html')" tappable>
+                <i class="fas fa-history"></i> History
+              </ons-list-item>
+              <ons-list-item onclick="fn.load('help_desk.html')" tappable>
+                <i class="fas fa-info"></i> Help Desk
+              </ons-list-item></p>
+              </div>
+            </ons-list>
+          </ons-page></div>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="Home.html"></ons-splitter-content>
+      </ons-splitter>
+      
+      <template id="Home.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <div class="navigation-bar" >
+                <p style="color: white;"><i class="fas fa-home"></i>  Home</div></p>
+            </div>
+          </ons-toolbar>
+          <p style="text-align: center; padding: 20px;">
+            <strong> SELECT VEHICLE</strong>
+                <br>(if you change your car)<br><br><br>
+                    <ons-list>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-checkbox input-id="check-1"></ons-checkbox>
+                        </label>
+                        <label for="check-1" class="center">
+                          Vehicle 1 (JDT 2012)
+                        </label>
+                      </ons-list-item>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-checkbox input-id="check-2"></ons-checkbox>
+                        </label>
+                        <label for="check-2" class="center">
+                            Vehicle 2 (JMD 1329)
+                        </label>
+                      </ons-list-item>
+                    </ons-list>
+          </p>
+          <p style="text-align: center; padding-top: 20px;">
+            <center><br><br><br>
+                <ons-row>
+                <th>
+                    <ons-col width="40%"><strong>Check In</strong></ons-col>
+                    <ons-col><strong>Check Out</strong></ons-col>
+                </th>
+                </ons-row>
+                <ons-row>
+                <th>
+                    <ons-col width="40%">2021-08-23<br>08:21:23</ons-col>
+                    <ons-col>2021-08-23<br>13:12:23</ons-col>
+                </th>
+                </ons-row>
+            </center></p>
+        </ons-page>
+      </template>
+      
+      <template id="profile_user.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <div class="navigation-bar" style="background-color:#f86c1b;">
+                    <p style="color: white;"><i class="fas fa-user"></i> User Profile </div></p>
+            </div>
+          </ons-toolbar>
+          <p style="text-align: center;"><br><br><strong>User's ID: 1369873<br></strong>
+            <form>
+              <div class="userform">
+              <br><label for="nameUser">User's Name:</label>
+              <center><li><input type="text" id="nameUser" name="nameUser"><br></center><br></li>
+              <label for="phone_no">Phone No:</label>
+              <center><li><input type="tel" id="phone_no" name="phone_no"><br></center><br></li>
+              <label for="email">Email:</label>
+              <center><li><input type="text" id="email" name="email"><br></center><br></li>
+              <label for="address">Address:</label>
+              <center><li><input type="text" id="address" name="address"><br></center></li>
+              </div>
+              <ul class="listSubmit">
+                <br><li><input type="button" name="Update" value="Update"></li>
+                <br><br><a href="changePassword.html"><li><input type="button" name="chgePsswrd" value="Change Password"></li></a>
+              </ul>
+              
+            </form>
+          </p>
+        </ons-page>
+      </template>
+      
+      <template id="manage_vehicle.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <div class="navigation-bar" style="background-color: #f86c1b;">
+                    <p style="color: white;"><i class="fas fa-car-side"></i> Manage Vehicle</div></p>
+            </div>
+          </ons-toolbar>
+          <br><br><br><ons-row>
+            <th>
+              <ons-col><strong>Type of Vehicle</strong></ons-col>
+              <ons-col width="50%"><strong> Plate No</strong></ons-col>
+            </th>
+          </ons-row>
+          <ons-row>
+            <ons-col>Car</ons-col>
+            <ons-col width="50%"> JDT 2012</ons-col>
+          </ons-row>
+          <ons-row>
+            <ons-col>Car</ons-col>
+            <ons-col width="50%"> JMD 1329</ons-col>
+          </ons-row>
+          <br><br><form>
+            <div class="userVehicle">
+                <center><strong><p style="font-size: large;">Register Vehicle</p></strong>
+                <p style="color: red;">(MAXIMUM 3 VEHICLES)</p></center>
+              <br><strong><label for="typeVehicle">Type of Vehicle :</label></strong>
+              <center>
+                <button class="btton"><i class="fas fa-car fa-2x" ></i></button><br><br>
+                <button class="btton"><i class="fas fa-motorcycle fa-2x"></i></button>
+              </center>
+              <strong><label for="plate_no">Plate No :</label></strong>
+              <center><input type="text" id="plate_no" name="plate_no"><br></center><br>
+              <ul class="listSubmit">
+                <br><li><input type="button" name="Update" value="Update"></li>
+            </ul><center>
+            <br><p style="color: red;">
+                If your vehicle have exceeds the maximum level, please contact the administrator. Thank you.</p>
+            </center></div>
+          </form>
+        </p>
+        </ons-page>
+    </template>
+
+    <template id="History.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <div class="navigation-bar" style="background-color: #f86c1b;">
+                    <p style="color: white;"><i class="fas fa-history"></i> History</div></p>
+            </div>
+          </ons-toolbar>
+          <br><br><br><ons-row>
+            <th>
+              <ons-col width="40%"><strong> Plate No</strong></ons-col>
+              <ons-col><strong>Check In</strong></ons-col>
+              <ons-col><strong>Check Out</strong></ons-col>
+            </th>
+          </ons-row>
+          <ons-row>
+            <ons-col width="40%"> JDT 2012</ons-col>
+            <ons-col>2021-08-23<br>08:21:23</ons-col>
+            <ons-col>2021-08-23<br>13:12:23</ons-col>
+          </ons-row>
+        </ons-page>
+    </template>
+
+    <template id="help_desk.html">
+        <ons-page>
+          <ons-toolbar>
+            <div class="left">
+              <ons-toolbar-button onclick="fn.open()">
+                <ons-icon icon="md-menu"></ons-icon>
+              </ons-toolbar-button>
+            </div>
+            <div class="center">
+                <div class="navigation-bar" style="background-color: #f86c1b;">
+                    <p style="color: white;"><i class="fas fa-info"></i> Help Desk</div></p>
+            </div>
+          </ons-toolbar>
+          <p style="text-align: center;">
+            <br>~~~ Send Feedback ~~~
+            <ons-row style="margin-top: 20px;">
+                <ons-col width="40px" style="text-align: center; line-height: 31px;">
+                  <ons-icon icon="md-thumb-down"></ons-icon>
+                </ons-col>
+                <ons-col>
+                  <ons-range style="width: 100%;" value="75"></ons-range>
+                </ons-col>
+                <ons-col width="40px" style="text-align: center; line-height: 31px;">
+                  <ons-icon icon="md-thumb-up"></ons-icon>
+                </ons-col>
+            </ons-row>
+
+            <br><br><center><p style="font-size: large;">If have any feedback, comment down below:</p></center>
+                <div class="formfeedback">
+                <center><li><input type="text" id="feedback" name="feedback"><br></center><br></li>
+                </div>
+                <ul class="listSubmit">
+                 <br><br><a href=" "><li><input type="button" name="Submit" value="Submit"></li></a>
+                </ul>
+                <ul class="listLogout">
+                <br><br><br><a href="login.html"><li><input type="button" name="Logout" value="LOGOUT"></li></a>
+              </ul>
+          </p>
+        </ons-page>
+    </template>
+</body>
+</html>

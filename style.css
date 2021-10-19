@@ -1,0 +1,157 @@
+*{margin: 0; padding: 0}
+body{
+    background:#ffa958;
+    padding-top: 10vh ;
+}
+
+.form-cointainer{
+    width:250px;
+    height: auto;
+    padding: 100px 30px;
+    background-color: #ff6c6c;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 #000;
+    margin:auto;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.form-cointainer img{
+    border-radius: 20px;
+}
+ul.list{
+    list-style-type: none ;
+    text-align: center ;
+}
+
+ul.list li{
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+ul.list li input{
+    width: 250px;
+    text-align: center;
+    padding: 8px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+ul.list li input[type="button"]{
+    background-color: #5ed9ff;
+    color: rgb(255, 255, 255);
+}
+
+ul.listLogout{
+    list-style-type: none ;
+    text-align: center ;
+}
+
+ul.listLogout li input{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    padding: 8px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+ul.listLogout li input[type="button"]{
+    background-color: #f86c1b;
+    color: rgb(255, 255, 255);
+}
+
+ons-col {
+    border: 2px solid grey;
+  }
+
+  ul.listSubmit{
+    list-style-type: none ;
+    text-align: center ;
+}
+
+ul.listSubmit li input{
+    width: 250px;
+    text-align: center;
+    padding: 8px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+ul.listSubmit li input[type="button"]{
+    background-color: #f86c1b;
+    color: rgb(255, 255, 255);
+}
+
+.userform{
+    font-size: medium;
+    list-style-type: none ;
+    text-align: center ;
+}
+
+.userform li input{
+    text-size-adjust: 100px;
+    width: 280px;
+    text-align: center;
+    padding: 6px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.changepswrd{
+    font-size: large;
+
+
+}
+
+.changepswrd li input{
+    width: 280px;
+    text-align: center;
+    padding: 6px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+.formfeedback{
+    font-size: medium;
+    list-style-type: none ;
+    text-align: center ;
+}
+
+.formfeedback li input{
+    width: 280px;
+    text-align: start;
+    padding: 6px 0px;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.navigation-bar {
+    background-color: #f86c1b;
+    
+    width: 500px;
+    height: 98px;
+}
+
+.btton {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+.image_position{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

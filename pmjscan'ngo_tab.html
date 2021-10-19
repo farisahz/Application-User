@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PMJ Scan 'n Go/Home</title>
+        <link rel="stylesheet" href="lib/onsen/css/onsenui.css"/>
+        <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="lib/onsen/js/onsenui.js"></script>
+    </head>
+    <body>
+        <ons-page>
+            <ons-toolbar>
+              <p style="background-color: coral;">
+              <div class="center">PMJ SCAN 'n GO</div></p>
+            </ons-toolbar>
+          
+            <ons-tabbar swipeable position="auto">
+              <ons-tab page="tab1.html" label="Manage Vehicle" icon="fa-car" active-icon="fa-car">
+              </ons-tab>
+              <ons-tab page="tab2.html" label="History" icon="fa-file" active-icon="fa-file">
+              </ons-tab>
+              <ons-tab page="tab3.html" label="Home" icon="ion-ios-home, material:md-home" active>
+              </ons-tab>
+              <ons-tab page="tab4.html" label="User Profile" icon="md-face" active-icon="md-face">
+              </ons-tab>
+              <ons-tab page="tab5.html" label="Help Desk" icon="md-settings" active-icon="md-settings">
+              </ons-tab>
+            </ons-tabbar>
+          </ons-page>
+          
+          <template id="tab1.html">
+            <ons-page id="manage_vehicle">
+              <ons-toolbar>  
+                <p style="font-size: xx-large;"><strong><div class="center">MANAGE VEHICLE</div></strong></p>
+              </ons-toolbar>
+                <form>
+                  <div class="userVehicle">
+                    <p style="color: rgb(44, 206, 12);">
+                    <br><label for="typeVehicle1">Type Vehicle 1:</label></p>
+                    <center>
+                      <ons-select id="choose-sel" onchange="editSelects(event)">
+                      <option value="Car">Car</option>
+                      <option value="Motorcycle">Motorcycle</option>
+                    </ons-select></center>
+                    <p style="color: rgb(44, 206, 12);">
+                    <label for="plate_no1">Plate No 1:</label></p>
+                    <center><input type="text" id="plate_no1" name="plate_no1"><br></center><br>
+
+                  <br><label for="typeVehicle2" >Type Vehicle 2:</label>
+                  <center>
+                    <ons-select id="choose-sel" onchange="editSelects(event)">
+                    <option value="Car">Car</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                  </ons-select></center>
+                  <label for="plate_no2">Plate No 2:</label>
+                  <center><input type="text" id="plate_no2" name="plate_no2"><br></center><br>
+                  </div>
+                </form>
+              </p>
+            </ons-page>
+          </template>
+          
+          <template id="tab2.html">
+            <ons-page id="History">
+              <ons-toolbar>
+                <p style="font-size: xx-large;"><strong><div class="center">HISTORY</div></strong></p>>
+              </ons-toolbar><br><br><br>
+              <ons-row>
+                <th>
+                  <ons-col width="40%"><strong> Plate No</strong></ons-col>
+                  <ons-col><strong>Check In</strong></ons-col>
+                  <ons-col><strong>Check Out</strong></ons-col>
+                </th>
+              </ons-row>
+              <ons-row>
+                <ons-col width="40%"> JDT 2012</ons-col>
+                <ons-col>2021-08-23<br>08:21:23</ons-col>
+                <ons-col>2021-08-23<br>13:12:23</ons-col>
+              </ons-row>
+            </ons-page>
+          </template>
+
+          <template id="tab3.html">
+            <ons-page id="Home">
+              <ons-toolbar>
+                <p style="font-size: xx-large;"><strong><div class="center">HOME</div></strong></p>
+              </ons-toolbar>
+              <p style="text-align: center;" ><br>
+                <strong> SELECT VEHICLE FOR TODAY</strong>
+                <br>(if you change your car)<br><br><br>
+                    <ons-list>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-checkbox input-id="check-1"></ons-checkbox>
+                        </label>
+                        <label for="check-1" class="center">
+                          Vehicle 1 (JDT 2012)
+                        </label>
+                      </ons-list-item>
+                      <ons-list-item tappable>
+                        <label class="left">
+                          <ons-checkbox input-id="check-2"></ons-checkbox>
+                        </label>
+                        <label for="check-2" class="center">
+                            Vehicle 2 (JMD 1329)
+                        </label>
+                      </ons-list-item>
+                    </ons-list>
+              </p>
+              <center><br><br><br>
+                <ons-row>
+                  <th>
+                    <ons-col width="20%"><strong>No</strong></ons-col>
+                    <ons-col width="40%"><strong>Check In</strong></ons-col>
+                    <ons-col width="40%"><strong>Check Out</strong></ons-col>
+                  </th>
+                </ons-row>
+                <ons-row>
+                  <ons-col width="20%"><strong>1</strong></ons-col>
+                  <ons-col width="40%">2021-08-23<br>08:21:23</ons-col>
+                  <ons-col width="40%">2021-08-23<br>13:12:23</ons-col>
+                </ons-row>
+              </center>
+            </ons-page>
+          </template>
+
+          <template id="tab4.html">
+            <ons-page id="profile_user">
+              <title>User Profile</title>
+                <ons-toolbar>
+                  <p style="font-size: xx-large;"><strong><div class="center">USER PROFILE</div></strong></p>
+                </ons-toolbar>
+                <p style="text-align: center;"><br><br><strong>User's ID: 1369873<br></strong>
+                <form>
+                  <div class="userform">
+                  <br><label for="nameUser">User's Name:</label>
+                  <center><li><input type="text" id="nameUser" name="nameUser"><br></center><br></li>
+                  <label for="phone_no">Phone No:</label>
+                  <center><li><input type="text" id="phone_no" name="phone_no"><br></center><br></li>
+                  <label for="email">Email:</label>
+                  <center><li><input type="text" id="email" name="email"><br></center><br></li>
+                  <label for="address">Address:</label>
+                  <center><li><input type="text" id="address" name="address"><br></center></li>
+                  </div>
+                  <ul class="listSubmit">
+                    <br><li><input type="button" name="Update" value="Update"></li>
+                    <br><br><a href="changePassword.html"><li><input type="button" name="chgePsswrd" value="Change Password"></li></a>
+                  </ul></p>
+                  
+                </form>
+              </p>
+            </ons-page>
+          </template>
+
+          <template id="tab5.html">
+            <ons-page id="help_desk">
+                <ons-toolbar>
+                  <p style="font-size: xx-large;">
+                    <strong><div class="center">HELP DESK</div></strong></p>
+                  </ons-toolbar>
+              <p style="text-align: center;">
+                <br>~~~Send Feedback~~~
+                <ons-row style="margin-top: 20px;">
+                    <ons-col width="40px" style="text-align: center; line-height: 31px;">
+                      <ons-icon icon="md-thumb-down"></ons-icon>
+                    </ons-col>
+                    <ons-col>
+                      <ons-range style="width: 100%;" value="75"></ons-range>
+                    </ons-col>
+                    <ons-col width="40px" style="text-align: center; line-height: 31px;">
+                      <ons-icon icon="md-thumb-up"></ons-icon>
+                    </ons-col>
+                </ons-row>
+
+                <br><br><center><p style="font-size: large;">If have any feedback, comment down below:</p></center>
+                    <div class="formfeedback">
+                    <center><li><input type="text" id="feedback" name="feedback"><br></center><br></li>
+                    </div>
+                  <ul class="listLogout">
+                    <br><br><br><a href="login.html"><li><input type="button" name="Logout" value="LOGOUT"></li></a>
+                  </ul>
+              </p>
+            </ons-page>
+          </template>
+     </body>
+</html>
